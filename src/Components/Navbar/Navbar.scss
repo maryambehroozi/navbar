@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Ubuntu");
+
+* {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    .navbar__logo-icon {
+      font-size: 24px;
+      font-weight: bold;
+      color: #d32f2f; // The red color for the icon
+      margin-right: 5px;
+    }
+
+    .navbar__logo-text {
+      font-size: 28px;
+      font-weight: bold;
+      color: #d32f2f;
+    }
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    border: 1px solid #d32f2f;
+    border-radius: 20px;
+    position: relative; // Needed for positioning camera icon
+
+    .navbar__dropdown {
+      padding: 7px;
+      border: none;
+      border-radius: 20px;
+
+      &:hover {
+        color: #d32f2f;
+        border: none;
+      }
+    }
+
+    .navbar__camera-icon {
+      position: absolute;
+      right:55px; // Adjust based on dropdown width
+      color: #777;
+      pointer-events: none; // Ensures it doesn't interfere with input
+      z-index: 1; // Keeps the icon above the input field
+      padding-left: 5px;
+    }
+
+    .navbar__input {
+      padding: 5px 5px 5px 30px; // Adjust padding for camera icon space
+      width: 400px;
+      border: none;
+      outline: none;
+      border-radius: 20px;
+      margin-right: 5px;
+    }
+
+    .navbar__search-button {
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      background-color: #d32f2f;
+      border: none;
+      padding: 7px 15px;
+      cursor: pointer;
+      color: white;
+
+      svg {
+        height: 16px;
+        width: 16px;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+
+    button {
+      background: none;
+      border: none;
+      margin-left: 15px;
+      font-size: 14px;
+      cursor: pointer;
+      color: #000;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        color: #d32f2f;
+      }
+
+      svg {
+        margin-right: 5px;
+      }
+    }
+
+    .navbar__rfq {
+      color: #d32f2f; // Red color for "Post My RFQ"
+    }
+  }
+}
